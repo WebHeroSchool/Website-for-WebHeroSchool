@@ -1,37 +1,92 @@
-.menu {
-font-family: Roboto;
-}
-p {
-font-family: Roboto;
-}
-button {
-font-family: Roboto;
-}
 body {
   margin: 0;
 }
 .wrapper {
-margin: auto;
+margin: 0 auto;
 width: 80%;
+background: center bottom no-repeat url('img/circle.svg');
+padding-bottom: 57px;
+}
+.header {
+  margin: 40px 0 168px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 190px;
+  height: 35px;
+  background: url('img/logo.svg');
+  margin-left: 4px;
+}
+.menu {
+font-family: Roboto;
+display: flex;
+align-items: center;
+margin-top: 8px;
 }
 .logo, .menu {
   display: inline-block;
 }
-.logo {
-  margin-right: 63%;
-  padding: 40px 0;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-.menu {
-  display: flex;
-  align-items: center;
-}
 .menu__item {
-  padding: 0 13px;
+  position: relative;
+  margin-right: 23px;
+  font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: opacity .5s;
 }
 .menu__item:last-child {
-  padding-right: 0;
+  margin-right: 10px;
+}
+.menu__item:after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0056EC;
+  opacity: 0;
+  transition: opacity .5s, width .5s;
+}
+.menu__item:hover {
+  opacity: 0.5;
+}
+.menu__item:hover:after, .menu__item_active:after {
+  opacity: 1;
+  width: 100%;
+}
+.main {
+  padding: 50px 63% 219px 3px;
+  background: bottom 84px right 5px no-repeat url(img/mainimg.svg);
+}
+.main__title {
+  margin: 0 0 37px 0;
+  font: bold 66px/87px pt_serif, arial, helvetica, sans-serif;
+  width: 567px;
+  padding-top: 22px;
+  letter-spacing: 2.9px;
+}
+.main__title-text_highlight {
+  background: linear-gradient(180deg,rgba(255,255,255,1) 15%,#ecf3ff 15%);
+
+}
+.main__subtitle {
+  margin: 0 0 38px 0;
+  padding-top: 4px;
+  font: normal 22px/26px Roboto, arial, helvetica, sans-serif;
+  width: 455px;
+}
+.main__button {
+display: inline-block;
+font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+color: #fff;
+background: #0056EC;
+padding: 21px 34px 18px 23px;
+text-decoration: none;
+border-radius: 4px;
+transition: opacity .5s;
+}
+.main__button:hover {
+  opacity: .5;
 }
